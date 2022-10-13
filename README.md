@@ -3,7 +3,7 @@ uni-app Vue3 Vite3 Pinia TypeScript 基础框架
 
 ## 特性
 
-- **最新技术栈**：使用 Vue3/Vite3/Pinia/TypeScript 等前端前沿技术开发;
+- **最新技术栈**：使用 Vue3/Vite3/Pinia/TypeScript/Windicss 等前端前沿技术开发;
 - **Eslint/Prettier**：规范代码格式，统一编码;
 - **路由拦截**：基于 uni.addInterceptor 进行路由拦截;
 - **请求拦截**：核心使用 [luch-request](https://github.com/lei-mu/luch-request)，支持请求和响应拦截等;
@@ -12,9 +12,10 @@ uni-app Vue3 Vite3 Pinia TypeScript 基础框架
 ## 目录结构
 
 ```shell
+├── mock              # mockjs
 ├── src
 │  ├── api            # 接口相关
-│  │  ├── model       # 数据模型
+│  │  ├── models      # 数据模型
 │  │  ├── auth.ts
 │  │  └── ...
 │  ├── components     # 组件目录
@@ -81,6 +82,11 @@ uni-app Vue3 Vite3 Pinia TypeScript 基础框架
 - 安装依赖
 
 ```bash
+npx degit xinlc/uniapp-vue3-ts-template my-project
+
+cd my-project
+
+# node v16
 pnpm install
 ```
 
@@ -88,7 +94,12 @@ pnpm install
 
 ```bash
 # 其他端请查看 package.json script
+
+# h5 or npm run xxx
 pnpm dev:h5
+
+# 微信小程序, 生成的包在 dist/dev/mp-weixin 下，用微信开发者工具打开
+pnpm dev:dev:mp-weixin
 ```
 
 - 打包
@@ -125,4 +136,4 @@ pnpm build:h5
 - [Pinia](https://github.com/vuejs/pinia) - 状态管理（代替 Vuex)
 - [TypeScript](https://github.com/microsoft/TypeScript) - TS
 - [luch-request](https://github.com/lei-mu/luch-request) - API 请求库
--
+- [Windi CSS](https://github.com/windicss/windicss) - ACSS 框架

@@ -10,6 +10,9 @@
   const jumpFontAwesomeIcon = () => {
     router.push('/demo/example/fontAwesomeIcon/index');
   };
+  const jumpPageC = () => {
+    router.push('/pagesC/index/index');
+  };
 </script>
 
 <template>
@@ -20,6 +23,9 @@
     </view>
     <view class="flex-row justify-center">
       <BasicButton @click="jumpFontAwesomeIcon">FontAwesomeIcon → </BasicButton>
+    </view>
+    <view class="flex-row justify-center">
+      <BasicButton @click="jumpPageC">jumpPageC → </BasicButton>
     </view>
   </AppProvider>
 </template>

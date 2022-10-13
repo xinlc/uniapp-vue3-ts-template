@@ -67,6 +67,7 @@
     "vue-i18n": "^9.2.2"
   },
   "devDependencies": {
+    "@dcasia/mini-program-tailwind-webpack-plugin": "^1.5.6",
     "@dcloudio/types": "^3.0.14",
     "@dcloudio/uni-automator": "3.0.0-alpha-3060420220922008",
     "@dcloudio/uni-cli-shared": "3.0.0-alpha-3060420220922008",
@@ -85,8 +86,8 @@
     "eslint-plugin-vue": "^9.6.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
-    "mrm": "^4.1.6",
     "mockjs": "^1.1.0",
+    "mrm": "^4.1.6",
     "postcss": "^8.4.17",
     "prettier": "^2.7.1",
     "sass": "^1.55.0",
@@ -94,7 +95,9 @@
     "unplugin-vue-components": "^0.22.8",
     "vite": "^3.1.6",
     "vite-plugin-eslint": "^1.8.1",
-    "vite-plugin-mock": "^2.9.6"
+    "vite-plugin-mock": "^2.9.6",
+    "vite-plugin-windicss": "^1.8.8",
+    "windicss": "^3.5.6"
   },
   "husky": {
     "hooks": {

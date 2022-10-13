@@ -2,10 +2,12 @@
  * https://vitejs.cn/config/
  */
 import { ConfigEnv, defineConfig, UserConfig, loadEnv } from 'vite';
+import { resolve } from 'path';
 import uni from '@dcloudio/vite-plugin-uni';
 import eslintPlugin from 'vite-plugin-eslint';
 import { viteMockServe } from 'vite-plugin-mock';
-import { resolve } from 'path';
+import WindiCSS from 'vite-plugin-windicss';
+import MiniProgramTailwind from '@dcasia/mini-program-tailwind-webpack-plugin/rollup';
 
 const pathResolve = (dir: string): any => {
   return resolve(__dirname, '.', dir);
@@ -57,6 +59,13 @@ const viteConfig = defineConfig((mode: ConfigEnv) => {
         supportTs: true, // 打开后，可以读取 ts 文件模块。 请注意，打开后将无法监视.js 文件。
         watchFiles: true, // 监视文件更改
       }),
+      // WindiCSS({
+      //   scan: {
+      //     dirs: ['.'], // 当前目录下所有文件
+      //     fileExtensions: ['vue', 'js', 'ts'], // 同时启用扫描vue/js/ts
+      //   },
+      // }),
+      // MiniProgramTailwind(),
       // eslintPlugin({
       //   include: ['src/**/*.js', 'src/**/*.vue', 'src/**/*.ts'],
       //   exclude: ['./node_modules/**'],

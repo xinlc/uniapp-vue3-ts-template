@@ -1,4 +1,11 @@
 {
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      // uni-ui 规则如下配置
+      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+    }
+  },
   "pages": [ // pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
     {
       "path": "pages/index/index",
@@ -101,6 +108,40 @@
         "ignoreAuth": true
       }
     }]
+  }, {
+    "root": "pagesC",
+    "pages": [
+      {
+        "path": "index/index",
+        "style": {
+          "navigationStyle": "custom",
+          "navigationBarTitleText": "uni-app"
+        },
+        "meta": {
+          "ignoreAuth": true
+        }
+      },
+      {
+        "path": "collection/index",
+        "style": {
+          "navigationStyle": "custom",
+          "disableScroll": true
+        },
+        "meta": {
+          "ignoreAuth": true
+        }
+      },
+      {
+        "path": "user/index",
+        "style": {
+          "enablePullDownRefresh": true,
+          "navigationStyle": "custom"
+        },
+        "meta": {
+          "ignoreAuth": true
+        }
+      }
+    ]
   }],
   "globalStyle": {
     "navigationBarTextStyle": "black",
