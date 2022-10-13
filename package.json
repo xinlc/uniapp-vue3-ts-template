@@ -34,6 +34,9 @@
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
+    "build:h5:staging": "uni build --mode staging",
+    "build:app:staging": "uni build --mode staging -p app",
+    "build:mp-weixin:staging": "uni build --mode staging -p mp-weixin",
     "lint": "eslint --cache --max-warnings 0  \"src/**/*.{vue,ts}\" --fix",
     "lint:fix": "eslint --ext .ts,tsx,vue src/** --no-error-on-unmatched-pattern --fix",
     "prettier": "prettier --write \"src/**/*.{js,ts,json,css,scss,vue}\"",
@@ -83,13 +86,15 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "mrm": "^4.1.6",
+    "mockjs": "^1.1.0",
     "postcss": "^8.4.17",
     "prettier": "^2.7.1",
     "sass": "^1.55.0",
     "typescript": "^4.8.4",
     "unplugin-vue-components": "^0.22.8",
     "vite": "^3.1.6",
-    "vite-plugin-eslint": "^1.8.1"
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-mock": "^2.9.6"
   },
   "husky": {
     "hooks": {
