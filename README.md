@@ -18,6 +18,7 @@ uni-app Vue3 Vite3 Pinia TypeScript 基础框架
 │  │  ├── models      # 数据模型
 │  │  ├── auth.ts
 │  │  └── ...
+│  ├── assets         # 静态资源目录，css、less/scss 等资源不要放在 static 目录下
 │  ├── components     # 组件目录
 │  │  ├── AppProvider
 │  │  └── ...

@@ -1,7 +1,7 @@
 import { createSSRApp } from 'vue';
 import App from './App.vue';
 import { setupStore } from '@/state';
-import '@/static/css/main.scss';
+import '@/assets/style/main.scss';
 import '@/components/FontAwesomeIcon/index.scss';
 import i18n from '@/language/index';
 
