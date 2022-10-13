@@ -1,0 +1,34 @@
+// flex布局
+
+$flex-directions: row, row-reverse, column, column-reverse;
+@each $v in $flex-directions {
+  .flex-#{$v} {
+    @include flex($v);
+  }
+}
+
+$justify-content: start, end, center, between, around, evenly;
+@each $v in $justify-content {
+  .justify-#{$v} {
+    @if ($v == 'start') {
+      justify-content: flex- + $v;
+    } @else if($v == 'start') {
+      justify-content: flex- + $v;
+    } @else {
+      justify-content: $v;
+    }
+  }
+}
+
+$align-items: start, end, center, baseline, stretch;
+@each $v in $align-items {
+  .items-#{$v} {
+    @if ($v == 'start') {
+      align-items: flex- + $v;
+    } @else if($v == 'start') {
+      align-items: flex- + $v;
+    } @else {
+      align-items: $v;
+    }
+  }
+}

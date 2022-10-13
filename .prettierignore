@@ -1,0 +1,20 @@
+# 忽略格式化文件
+node_modules
+dist
+.idea
+.vscode
+.hbuilderx
+src/manifest.json
+src/pages.json
+*.sh
+node_modules
+*.md
+*.woff
+*.ttf
+*.yaml
+dist
+/public
+/docs
+.husky
+.local
+/bin

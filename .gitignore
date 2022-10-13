@@ -1,0 +1,34 @@
+.DS_Store
+node_modules/
+unpackage/
+dist/
+dist-ssr/
+
+# local env files
+# *.local
+.env.local
+.env.*.local
+
+# Log files
+# logs
+# *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor directories and files
+.project
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+.hbuilderx
+# 要提交 .env 来确保 jit v2 的开发 watch mode
+!.env
+
+src/ignore
