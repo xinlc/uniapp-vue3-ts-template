@@ -39,7 +39,7 @@ const viteConfig = defineConfig((mode: ConfigEnv) => {
       host: true,
       // host: '0.0.0.0',
       port: env.VITE_PORT as unknown as number,
-      open: env.VITE_OPEN,
+      open: env.VITE_OPEN === 'true',
       proxy: {
         [env.VITE_BASE]: {
           target: env.VITE_BASE_URL,
@@ -75,7 +75,7 @@ const viteConfig = defineConfig((mode: ConfigEnv) => {
     css: {
       preprocessorOptions: {
         scss: {
-          // additionalData: '@import "@/static/css/main.scss";',
+          // additionalData: '@import "@/assets/style/main.scss";',
         },
       },
     },
