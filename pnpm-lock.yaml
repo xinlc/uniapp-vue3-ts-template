@@ -19,6 +19,7 @@ specifiers:
   '@dcloudio/uni-mp-weixin': 3.0.0-alpha-3060420220922008
   '@dcloudio/uni-quickapp-webview': 3.0.0-alpha-3060420220922008
   '@dcloudio/uni-stacktracey': 3.0.0-alpha-3060420220922001
+  '@dcloudio/uni-ui': ^1.4.22
   '@dcloudio/vite-plugin-uni': 3.0.0-alpha-3060420220922008
   '@fortawesome/fontawesome-free': ^6.2.0
   '@types/crypto-js': ^4.1.1
@@ -46,7 +47,7 @@ specifiers:
   sass: ^1.55.0
   typescript: ^4.8.4
   unplugin-vue-components: ^0.22.8
-  vite: ^3.1.6
+  vite: ^3.1.7
   vite-plugin-eslint: ^1.8.1
   vite-plugin-mock: ^2.9.6
   vite-plugin-windicss: ^1.8.8
@@ -68,6 +69,7 @@ dependencies:
   '@dcloudio/uni-mp-toutiao': registry.npmmirror.com/@dcloudio/uni-mp-toutiao/3.0.0-alpha-3060420220922008_postcss@8.4.18+vue@3.2.40
   '@dcloudio/uni-mp-weixin': registry.npmmirror.com/@dcloudio/uni-mp-weixin/3.0.0-alpha-3060420220922008_postcss@8.4.18+vue@3.2.40
   '@dcloudio/uni-quickapp-webview': registry.npmmirror.com/@dcloudio/uni-quickapp-webview/3.0.0-alpha-3060420220922008_postcss@8.4.18+vue@3.2.40
+  '@dcloudio/uni-ui': registry.npmmirror.com/@dcloudio/uni-ui/1.4.22
   '@fortawesome/fontawesome-free': registry.npmmirror.com/@fortawesome/fontawesome-free/6.2.0
   crypto-js: registry.npmmirror.com/crypto-js/4.1.1
   lodash-es: registry.npmmirror.com/lodash-es/4.17.21
@@ -994,6 +996,12 @@ packages:
       - supports-color
       - ts-node
       - vue
+    dev: false
+
+  registry.npmmirror.com/@dcloudio/uni-ui/1.4.22:
+    resolution: {integrity: sha512-+ymdGhp+If+iZXzgf8rOQNz7mIKenTbzO9T6zkte5YC7WuBQyH4pwWpWRTpatR81XHZwJ2zES1DvJexzSS0Huw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@dcloudio/uni-ui/-/uni-ui-1.4.22.tgz}
+    name: '@dcloudio/uni-ui'
+    version: 1.4.22
     dev: false
 
   registry.npmmirror.com/@dcloudio/uni-uts-vite/3.0.0-alpha-3060420220922008_postcss@8.4.18+vue@3.2.40:

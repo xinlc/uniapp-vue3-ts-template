@@ -37,10 +37,10 @@
     "build:h5:staging": "uni build --mode staging",
     "build:app:staging": "uni build --mode staging -p app",
     "build:mp-weixin:staging": "uni build --mode staging -p mp-weixin",
+    "prepare": "husky install",
     "lint": "eslint --cache --max-warnings 0  \"src/**/*.{vue,ts}\" --fix",
     "lint:fix": "eslint --ext .ts,tsx,vue src/** --no-error-on-unmatched-pattern --fix",
     "prettier": "prettier --write \"src/**/*.{js,ts,json,css,scss,vue}\"",
-    "prepare": "husky install",
     "mock": "cd mock && ts-node-dev mock.ts"
   },
   "dependencies": {
@@ -57,6 +57,7 @@
     "@dcloudio/uni-mp-toutiao": "3.0.0-alpha-3060420220922008",
     "@dcloudio/uni-mp-weixin": "3.0.0-alpha-3060420220922008",
     "@dcloudio/uni-quickapp-webview": "3.0.0-alpha-3060420220922008",
+    "@dcloudio/uni-ui": "^1.4.22",
     "@fortawesome/fontawesome-free": "^6.2.0",
     "crypto-js": "^4.1.1",
     "lodash-es": "^4.17.21",
@@ -93,7 +94,7 @@
     "sass": "^1.55.0",
     "typescript": "^4.8.4",
     "unplugin-vue-components": "^0.22.8",
-    "vite": "^3.1.6",
+    "vite": "^3.1.7",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-mock": "^2.9.6",
     "vite-plugin-windicss": "^1.8.8",
@@ -105,7 +106,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,vue,ts,tsx}": [
+    "src/**/*.{js,jsx,vue,ts,tsx}": [
       "prettier --write",
       "git add"
     ]

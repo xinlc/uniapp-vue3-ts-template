@@ -1,13 +1,13 @@
 /*
  * https://vitejs.cn/config/
  */
-import { ConfigEnv, defineConfig, UserConfig, loadEnv } from 'vite';
+import { ConfigEnv, defineConfig, loadEnv } from 'vite';
 import { resolve } from 'path';
 import uni from '@dcloudio/vite-plugin-uni';
 import eslintPlugin from 'vite-plugin-eslint';
 import { viteMockServe } from 'vite-plugin-mock';
-import WindiCSS from 'vite-plugin-windicss';
-import MiniProgramTailwind from '@dcasia/mini-program-tailwind-webpack-plugin/rollup';
+// import WindiCSS from 'vite-plugin-windicss';
+// import MiniProgramTailwind from '@dcasia/mini-program-tailwind-webpack-plugin/rollup';
 
 const pathResolve = (dir: string): any => {
   return resolve(__dirname, '.', dir);
@@ -49,6 +49,33 @@ const viteConfig = defineConfig((mode: ConfigEnv) => {
         },
       },
     },
+    // build: {
+    //   outDir: 'dist',
+    //   sourcemap: false,
+    //   chunkSizeWarningLimit: 1500,
+    //   rollupOptions: {
+    //     output: {
+    //       entryFileNames: `assets/[name].${new Date().getTime()}.js`,
+    //       chunkFileNames: `assets/[name].${new Date().getTime()}.js`,
+    //       assetFileNames: `assets/[name].${new Date().getTime()}.[ext]`,
+    //       compact: true,
+    //       manualChunks: {
+    //         vue: ['vue', 'vue-router', 'vuex'],
+    //         echarts: ['echarts'],
+    //       },
+    //     },
+    //   },
+    //   terserOptions: {
+    //     compress: {
+    //       drop_console: true,
+    //       drop_debugger: true,
+    //     },
+    //     ie8: true,
+    //     output: {
+    //       comments: true,
+    //     },
+    //   },
+    // },
     plugins: [
       uni(),
       viteMockServe({

@@ -59,90 +59,103 @@
       }
     }
   ],
-  "subPackages": [{
-    "root": "pagesA",
-    "pages": [{
-      "path": "list/test1/index",
-      "style": {
-        "navigationBarTitleText": "test1"
-      },
-      "meta": {
-        "ignoreAuth": true
-      }
-    },{
-      "path": "list/test2/index",
-      "style": {
-        "navigationBarTitleText": "test2"
-      },
-      "meta": {
-        "ignoreAuth": true
-      }
-    }]
-  }, {
-    "root": "pagesB",
-    "pages": [{
-      "path": "detail/index",
-      "style": {
-        "navigationBarTitleText": "Detail"
-      },
-      "meta": {
-        "ignoreAuth": true
-      }
-    }]
-  },{
-    "root": "demo/example",
-    "pages": [{
-      "path": "fontAwesomeIcon/index",
-      "style": {
-        "navigationBarTitleText": "FontAwesomeIcon-Demo"
-      },
-      "meta": {
-        "ignoreAuth": true
-      }
-    },{
-      "path": "fontAwesomeIcon/check",
-      "style": {
-        "navigationBarTitleText": "FontAwesomeIcon-Check"
-      },
-      "meta": {
-        "ignoreAuth": true
-      }
-    }]
-  }, {
-    "root": "pagesC",
-    "pages": [
-      {
-        "path": "index/index",
-        "style": {
-          "navigationStyle": "custom",
-          "navigationBarTitleText": "uni-app"
+  "subPackages": [
+    {
+      "root": "pagesA",
+      "pages": [
+        {
+          "path": "list/test1/index",
+          "style": {
+            "navigationBarTitleText": "test1"
+          },
+          "meta": {
+            "ignoreAuth": true
+          }
         },
-        "meta": {
-          "ignoreAuth": true
+        {
+          "path": "list/test2/index",
+          "style": {
+            "navigationBarTitleText": "test2"
+          },
+          "meta": {
+            "ignoreAuth": true
+          }
         }
-      },
-      {
-        "path": "collection/index",
-        "style": {
-          "navigationStyle": "custom",
-          "disableScroll": true
+      ]
+    },
+    {
+      "root": "pagesB",
+      "pages": [
+        {
+          "path": "detail/index",
+          "style": {
+            "navigationBarTitleText": "Detail"
+          },
+          "meta": {
+            "ignoreAuth": true
+          }
+        }
+      ]
+    },
+    {
+      "root": "demo/example",
+      "pages": [
+        {
+          "path": "fontAwesomeIcon/index",
+          "style": {
+            "navigationBarTitleText": "FontAwesomeIcon-Demo"
+          },
+          "meta": {
+            "ignoreAuth": true
+          }
         },
-        "meta": {
-          "ignoreAuth": true
+        {
+          "path": "fontAwesomeIcon/check",
+          "style": {
+            "navigationBarTitleText": "FontAwesomeIcon-Check"
+          },
+          "meta": {
+            "ignoreAuth": true
+          }
         }
-      },
-      {
-        "path": "user/index",
-        "style": {
-          "enablePullDownRefresh": true,
-          "navigationStyle": "custom"
+      ]
+    },
+    {
+      "root": "pagesC",
+      "pages": [
+        {
+          "path": "index/index",
+          "style": {
+            "navigationStyle": "custom",
+            "navigationBarTitleText": "uni-app"
+          },
+          "meta": {
+            "ignoreAuth": true
+          }
         },
-        "meta": {
-          "ignoreAuth": true
+        {
+          "path": "collection/index",
+          "style": {
+            "navigationStyle": "custom",
+            "disableScroll": true
+          },
+          "meta": {
+            "ignoreAuth": true
+          }
+        },
+        {
+          "path": "user/index",
+          "style": {
+            "enablePullDownRefresh": true,
+            "navigationStyle": "custom"
+          },
+          "meta": {
+            "ignoreAuth": true
+          }
         }
-      }
-    ]
-  }],
+      ]
+    }
+  ],
   "globalStyle": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
@@ -153,21 +166,25 @@
     "color": "#474747",
     "selectedColor": "#9BC6FC",
     "backgroundColor": "#FFFFFF",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "static/images/tabBar/home.png",
-      "selectedIconPath": "static/images/tabBar/selectedHome.png"
-    },{
-      "pagePath": "pages/demo/index",
-      "text": "Demo",
-      "iconPath": "static/images/tabBar/demo.png",
-      "selectedIconPath": "static/images/tabBar/selectedDemo.png"
-    },{
-      "pagePath": "pages/about/index",
-      "text": "关于",
-      "iconPath": "static/images/tabBar/about.png",
-      "selectedIconPath": "static/images/tabBar/selectedAbout.png"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/images/tabBar/home.png",
+        "selectedIconPath": "static/images/tabBar/selectedHome.png"
+      },
+      {
+        "pagePath": "pages/demo/index",
+        "text": "Demo",
+        "iconPath": "static/images/tabBar/demo.png",
+        "selectedIconPath": "static/images/tabBar/selectedDemo.png"
+      },
+      {
+        "pagePath": "pages/about/index",
+        "text": "关于",
+        "iconPath": "static/images/tabBar/about.png",
+        "selectedIconPath": "static/images/tabBar/selectedAbout.png"
+      }
+    ]
   }
 }
