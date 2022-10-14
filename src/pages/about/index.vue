@@ -3,7 +3,7 @@
   import { onShow } from '@dcloudio/uni-app';
   import BasicButton from '@/components/BasicButton/index.vue';
   import AppProvider from '@/components/AppProvider/inedx.vue';
-  import { useAuthStore } from '@/state/modules/auth';
+  import { useAuthStore } from '@/stores/modules/auth';
   import { useRouter } from '@/hooks/router';
 
   const authStore = useAuthStore();

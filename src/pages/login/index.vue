@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { reactive, ref } from 'vue';
   import { onLoad } from '@dcloudio/uni-app';
-  import { useAuthStore } from '@/state/modules/auth';
+  import { useAuthStore } from '@/stores/modules/auth';
   import { Toast } from '@/utils/uniapi/prompt';
   import { useRouter } from '@/hooks/router';
 

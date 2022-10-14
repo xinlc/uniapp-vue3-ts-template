@@ -2,7 +2,7 @@ import Request from 'luch-request';
 import { assign } from 'lodash-es';
 import { Toast } from '@/utils/uniapi/prompt';
 import { getBaseUrl } from '@/utils/env';
-import { useAuthStore } from '@/state/modules/auth';
+import { useAuthStore } from '@/stores/modules/auth';
 import { ResultEnum } from '@/enums/httpEnum';
 
 const BASE_URL = getBaseUrl();

@@ -1,8 +1,8 @@
 <script setup lang="ts">
   import { onLaunch, onShow, onHide } from '@dcloudio/uni-app';
-  import { useAuthStore } from '@/state/modules/auth';
+  import { useAuthStore } from '@/stores/modules/auth';
   import { removeInterceptor, setupInterceptors } from '@/utils/interceptors';
-  import { useRouterStore } from '@/state/modules/router';
+  import { useRouterStore } from '@/stores/modules/router';
   /* #ifdef MP-WEIXIN || MP-ALIPAY */
   import { dynamicLoadFontFace } from '@/utils/fonts';
   /* #endif */

@@ -1,5 +1,5 @@
 import { LOGIN_PAGE } from '@/enums/routerEnum';
-import { useRouterStore } from '@/state/modules/router';
+import { useRouterStore } from '@/stores/modules/router';
 import { useRouter } from '@/hooks/router';
 
 /**

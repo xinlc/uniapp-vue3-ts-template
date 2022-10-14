@@ -1,4 +1,5 @@
 import { request } from '@/utils/http';
+import { LoginParams, LoginModel } from '@/api/models/authModel';
 
 const LOGIN = '/login';
 const LOGIN_OUT = '/logout';

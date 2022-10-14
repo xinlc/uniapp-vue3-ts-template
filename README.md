@@ -36,7 +36,7 @@ uni-app Vue3 Vite3 Pinia TypeScript 基础框架
 │  │  └── ...
 │  ├── pagesA          # 子页面(拆包)
 │  │  └── list
-│  ├── state           # 状态管理模式(pinia stores)
+│  ├── stores           # state 状态管理模式(pinia)
 │  │  ├── modules
 │  │  └── index.ts
 │  ├── static          # 静态文件静态公共文件

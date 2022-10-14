@@ -1,5 +1,5 @@
 import { Navigates } from '@/utils/router/navigates';
-import { useRouterStore } from '@/state/modules/router';
+import { useRouterStore } from '@/stores/modules/router';
 import { RouteLocationNormalized } from '@/types/router/route';
 
 const router = new Navigates();

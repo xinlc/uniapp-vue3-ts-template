@@ -3,7 +3,7 @@ import { cloneDeep } from 'lodash-es';
 import { NAVIGATE_TYPE } from '@/enums/routerEnum';
 import { deepMerge } from '@/utils';
 import { routerBeforeEach } from '@/utils/router/interceptor';
-import { useRouterStore } from '@/state/modules/router';
+import { useRouterStore } from '@/stores/modules/router';
 import { filterPath } from '@/utils/router/constant';
 
 export type NavigateOptions = Partial<Omit<UniApp.NavigateToOptions, 'url'>> & {
