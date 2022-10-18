@@ -21,11 +21,8 @@ const viteConfig = defineConfig((mode: ConfigEnv) => {
   const root = process.cwd();
   const env = loadEnv(mode.mode, root);
 
-  const localEnabled: boolean =
-    (env.VITE_USE_MOCK as unknown as boolean) || false;
-
-  const prodEnabled: boolean =
-    (env.VITE_USE_CHUNK_MOCK as unknown as boolean) || false;
+  const localEnabled: boolean = (env.VITE_USE_MOCK as unknown as boolean) || false;
+  const prodEnabled: boolean = (env.VITE_USE_CHUNK_MOCK as unknown as boolean) || false;
 
   return {
     base: mode.command === 'serve' ? './' : env.VITE_PUBLIC_PATH,

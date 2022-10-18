@@ -11,8 +11,7 @@
 :root,
 :host {
   --#{$fa-css-prefix}-style-family-classic: $fa-style-family-solid;
-  --#{$fa-css-prefix}-font-solid: normal 900 1em/1
-    '#{ $fa-style-family-solid  }';
+  --#{$fa-css-prefix}-font-solid: normal 900 1em/1 '#{ $fa-style-family-solid  }';
 }
 
 @font-face {

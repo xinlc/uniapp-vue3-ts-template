@@ -11,8 +11,7 @@
 :root,
 :host {
   --#{$fa-css-prefix}-style-family-classic: $fa-style-family-duotone;
-  --#{$fa-css-prefix}-font-duotone: normal 900 1em/1
-    '#{ $fa-style-family-duotone }';
+  --#{$fa-css-prefix}-font-duotone: normal 900 1em/1 '#{ $fa-style-family-duotone }';
 }
 
 @font-face {

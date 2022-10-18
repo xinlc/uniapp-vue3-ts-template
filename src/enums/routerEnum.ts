@@ -6,12 +6,7 @@ export enum NAVIGATE_TYPE {
   NAVIGATE_BACK = 'navigateBack',
 }
 
-export const NAVIGATE_TYPE_LIST = [
-  'navigateTo',
-  'redirectTo',
-  'reLaunch',
-  'switchTab',
-];
+export const NAVIGATE_TYPE_LIST = ['navigateTo', 'redirectTo', 'reLaunch', 'switchTab'];
 
 export const HOME_PAGE = '/pages/index/index';
 export const LOGIN_PAGE = '/pages/login/index';

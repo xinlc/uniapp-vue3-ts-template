@@ -11,8 +11,7 @@
 :root,
 :host {
   --#{$fa-css-prefix}-style-family-brands: $fa-style-family-brands;
-  --#{$fa-css-prefix}-font-brands: normal 400 1em/1
-    '#{ $fa-style-family-brands }';
+  --#{$fa-css-prefix}-font-brands: normal 400 1em/1 '#{ $fa-style-family-brands }';
 }
 
 @font-face {

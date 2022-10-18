@@ -30,9 +30,7 @@ export const regEmail = (str: string) => {
 
 //匹配域名
 export const regRealmName = (str: string) => {
-  return RegExp(
-    /[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\/.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+\/.?/,
-  ).test(str);
+  return RegExp(/[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\/.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+\/.?/).test(str);
 };
 
 //匹配密码（密码(以字母开头，长度在6~18之间，只能包含字母、数字和下划线)）

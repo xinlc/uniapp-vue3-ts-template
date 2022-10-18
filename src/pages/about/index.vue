@@ -33,18 +33,10 @@
         </view>
         <view class="desc">{{ isLogin ? '测试' : '未登入' }}</view>
       </view>
-      <view class="cell"
-        ><BasicButton @click="handleJump('/pages/log/index?id=4345&title=log')"
-          >log</BasicButton
-        ></view
-      >
-      <view class="cell" v-if="isLogin"
-        ><BasicButton @click="handleLoginOut">登出</BasicButton></view
-      >
+      <view class="cell"><BasicButton @click="handleJump('/pages/log/index?id=4345&title=log')">log</BasicButton></view>
+      <view class="cell" v-if="isLogin"><BasicButton @click="handleLoginOut">登出</BasicButton></view>
       <view class="cell" v-else>
-        <BasicButton @click="handleJump('/pages/login/index')">
-          登入
-        </BasicButton>
+        <BasicButton @click="handleJump('/pages/login/index')"> 登入 </BasicButton>
       </view>
     </view>
   </AppProvider>

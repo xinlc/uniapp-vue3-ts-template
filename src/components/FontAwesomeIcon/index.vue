@@ -158,12 +158,7 @@
   };
 </script>
 <template>
-  <view
-    @click="onClick"
-    class="icon-wrap"
-    :class="wrapClassObject"
-    :style="wrapStyleObject"
-  >
+  <view @click="onClick" class="icon-wrap" :class="wrapClassObject" :style="wrapStyleObject">
     <template v-if="props.stack">
       <slot :stack="props.stack"></slot>
     </template>

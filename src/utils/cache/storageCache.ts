@@ -60,13 +60,9 @@ export const createStorage = ({
         const stringData = JSON.stringify({
           value,
           time: Date.now(),
-          expire: !isNullOrUnDef(expire)
-            ? new Date().getTime() + expire * 1000
-            : null,
+          expire: !isNullOrUnDef(expire) ? new Date().getTime() + expire * 1000 : null,
         });
-        const stringifyValue = this.hasEncrypt
-          ? this.encryption.encryptByAES(stringData)
-          : stringData;
+        const stringifyValue = this.hasEncrypt ? this.encryption.encryptByAES(stringData) : stringData;
         uni.setStorageSync(this.getKey(key), stringifyValue);
       } catch (err) {
         throw new Error(`setStorageSync error: ${err}`);
@@ -84,9 +80,7 @@ export const createStorage = ({
       if (!val) return def;
 
       try {
-        const decVal = this.hasEncrypt
-          ? this.encryption.decryptByAES(val)
-          : val;
+        const decVal = this.hasEncrypt ? this.encryption.decryptByAES(val) : val;
         const data = JSON.parse(decVal);
         const { value, expire } = data;
         if (isNullOrUnDef(expire) || expire < new Date().getTime()) {

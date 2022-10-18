@@ -78,21 +78,11 @@
   <view class="h-20">
     <view class="bg-white rounded-t-2xl w-full bottom-0 fixed content">
       <view class="flex w-full justify-around">
-        <view
-          v-for="(item, i) of menuList"
-          :key="i"
-          class="w-1/3"
-          @tap="route(item, i)"
-        >
+        <view v-for="(item, i) of menuList" :key="i" class="w-1/3" @tap="route(item, i)">
           <view class="flex justify-center">
-            <text
-              :class="[item.icon, { selected: props.pagePath === item.url }]"
-              class="text-2xl iconfont"
-            ></text>
+            <text :class="[item.icon, { selected: props.pagePath === item.url }]" class="text-2xl iconfont"></text>
           </view>
-          <view
-            :class="{ 'text-purple-600': props.pagePath === item.url }"
-            class="flex justify-center"
+          <view :class="{ 'text-purple-600': props.pagePath === item.url }" class="flex justify-center"
             >{{ item.label }}
           </view>
         </view>

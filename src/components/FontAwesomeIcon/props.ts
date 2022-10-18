@@ -17,14 +17,7 @@ export const FontAwesomeIconProps = {
     default: 'solid',
     validator(value: string) {
       // The value must match one of these strings
-      return [
-        'solid',
-        'regular',
-        'light',
-        'thin',
-        'duotone',
-        'brands',
-      ].includes(value);
+      return ['solid', 'regular', 'light', 'thin', 'duotone', 'brands'].includes(value);
     },
   },
   /** icon sharp
@@ -77,9 +70,7 @@ export const FontAwesomeIconProps = {
     default: false,
     validator(value: string) {
       // The value must match one of these strings
-      return ['horizontal', 'vertical', 'both', 'inherit', false].includes(
-        value,
-      );
+      return ['horizontal', 'vertical', 'both', 'inherit', false].includes(value);
     },
   },
   /**

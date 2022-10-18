@@ -29,8 +29,7 @@
     <view class="tip">
       Tip: 共6种风格图标, 7个字体文件,
       <!-- #ifdef MP-WEIXIN || MP-ALIPAY -->
-      微信小程序和阿里小程序动态远程加载font awesome 字体,
-      在\src\utils\fonts.ts中配置,
+      微信小程序和阿里小程序动态远程加载font awesome 字体, 在\src\utils\fonts.ts中配置,
       <!-- #endif -->
       <!-- #ifndef MP-WEIXIN || MP-ALIPAY -->
       H5,APP(Android)在组件目录index.scss中配置引入字体,
@@ -69,20 +68,8 @@
     <view class="title">color-颜色</view>
     <view> <FontAwesomeIcon name="house" />默认 </view>
     <view> <FontAwesomeIcon name="house" color="Tomato" />Tomato </view>
-    <view>
-      <FontAwesomeIcon
-        mode="regular"
-        name="house"
-        color="Dodgerblue"
-      />Dodgerblue</view
-    >
-    <view>
-      <FontAwesomeIcon
-        mode="light"
-        name="house"
-        color="Mediumslateblue"
-      />Mediumslateblue</view
-    >
+    <view> <FontAwesomeIcon mode="regular" name="house" color="Dodgerblue" />Dodgerblue</view>
+    <view> <FontAwesomeIcon mode="light" name="house" color="Mediumslateblue" />Mediumslateblue</view>
     <view>
       <FontAwesomeIcon mode="brands" name="bilibili" color="Dodgerblue" />
       Dodgerblue
@@ -95,48 +82,18 @@
     <view> <FontAwesomeIcon mode="duotone" name="house" size="64" />64rpx</view>
     <view class="title">bgColor-背景色</view>
     <view> <FontAwesomeIcon name="house" bg-color="DodgerBlue" />solid </view>
-    <view>
-      <FontAwesomeIcon
-        mode="regular"
-        name="house"
-        bg-color="SkyBlue"
-      />regular</view
-    >
+    <view> <FontAwesomeIcon mode="regular" name="house" bg-color="SkyBlue" />regular</view>
     <view class="title">rotate-旋转角度</view>
-    <view>
-      <FontAwesomeIcon mode="duotone" name="house" rotate="63" />house 63</view
-    >
-    <view>
-      <FontAwesomeIcon
-        mode="duotone"
-        name="snowboarding"
-        rotate="58"
-      />snowboarding 58</view
-    >
+    <view> <FontAwesomeIcon mode="duotone" name="house" rotate="63" />house 63</view>
+    <view> <FontAwesomeIcon mode="duotone" name="snowboarding" rotate="58" />snowboarding 58</view>
     <view class="title">rotateFlip-旋转-翻转</view>
     <view> <FontAwesomeIcon mode="duotone" name="snowboarding" />正常</view>
     <view>
-      <FontAwesomeIcon
-        mode="duotone"
-        name="snowboarding"
-        rotate-flip="horizontal"
-      />
+      <FontAwesomeIcon mode="duotone" name="snowboarding" rotate-flip="horizontal" />
       水平翻转
     </view>
-    <view>
-      <FontAwesomeIcon
-        mode="duotone"
-        name="snowboarding"
-        rotate-flip="vertical"
-      />垂直翻转
-    </view>
-    <view>
-      <FontAwesomeIcon
-        mode="duotone"
-        name="snowboarding"
-        rotate-flip="both"
-      />垂直水平翻转
-    </view>
+    <view> <FontAwesomeIcon mode="duotone" name="snowboarding" rotate-flip="vertical" />垂直翻转 </view>
+    <view> <FontAwesomeIcon mode="duotone" name="snowboarding" rotate-flip="both" />垂直水平翻转 </view>
     <view class="title">beat-缩放动画</view>
     <FontAwesomeIcon name="circle-plus" beat />
     <FontAwesomeIcon name="heart" beat />
@@ -149,14 +106,7 @@
     <view class="title">opacity-透明度值 </view>
     <FontAwesomeIcon name="heart" fade opacity="0.2" />
     <view class="title">beat+fade-跳动+淡入淡出动画 </view>
-    <FontAwesomeIcon
-      name="heart"
-      beat
-      fade
-      opacity="0.68"
-      duration="1.5"
-      scale="2.0"
-    />
+    <FontAwesomeIcon name="heart" beat fade opacity="0.68" duration="1.5" scale="2.0" />
     <view class="title">bounce-弹跳动画 </view>
     <FontAwesomeIcon name="basketball" bounce />
     <FontAwesomeIcon name="volleyball" bounce />
@@ -197,28 +147,11 @@
     <FontAwesomeIcon name="circle-notch" spin duration="1.5" />
     <FontAwesomeIcon name="cog" spin duration="2" />
     <FontAwesomeIcon name="cog" spin spin-reverse duration="15" />
-    <FontAwesomeIcon
-      name="spinner"
-      spin
-      spin-pulse
-      spin-delay="5s"
-      duration="2"
-    />
-    <FontAwesomeIcon
-      name="spinner"
-      spin
-      spin-pulse
-      spin-reverse
-      spin-iteration-count="3"
-      duration="2"
-    />
+    <FontAwesomeIcon name="spinner" spin spin-pulse spin-delay="5s" duration="2" />
+    <FontAwesomeIcon name="spinner" spin spin-pulse spin-reverse spin-iteration-count="3" duration="2" />
     <view class="title">border-边框</view>
     <FontAwesomeIcon name="arrow-right" border />
-    <FontAwesomeIcon
-      name="arrow-right"
-      border
-      :border-config="{ color: '#000' }"
-    />
+    <FontAwesomeIcon name="arrow-right" border :border-config="{ color: '#000' }" />
 
     <view class="title">counter-计数</view>
     <view> <FontAwesomeIcon mode="light" name="house" counter="999" />99+</view>
@@ -232,17 +165,8 @@
     <view class="title" style="clear: both">stack-堆叠</view>
     <FontAwesomeIcon stack>
       <template #default="slotProps">
-        <FontAwesomeIcon
-          name="circle"
-          :stack-child="slotProps.stack"
-          stack-x="2"
-        />
-        <FontAwesomeIcon
-          name="flag"
-          :stack-child="slotProps.stack"
-          stack-inverse
-          stack-x="1"
-        />
+        <FontAwesomeIcon name="circle" :stack-child="slotProps.stack" stack-x="2" />
+        <FontAwesomeIcon name="flag" :stack-child="slotProps.stack" stack-inverse stack-x="1" />
       </template>
     </FontAwesomeIcon>
     <FontAwesomeIcon stack flip>
@@ -255,11 +179,7 @@
           stack-z-index="2"
           stack-x="1"
         />
-        <FontAwesomeIcon
-          name="square"
-          :stack-child="slotProps.stack"
-          stack-x="2"
-        />
+        <FontAwesomeIcon name="square" :stack-child="slotProps.stack" stack-x="2" />
       </template>
     </FontAwesomeIcon>
 
@@ -274,21 +194,13 @@
           stack-z-index="2"
           stack-x="1"
         />
-        <FontAwesomeIcon
-          name="square"
-          :stack-child="slotProps.stack"
-          stack-x="2"
-        />
+        <FontAwesomeIcon name="square" :stack-child="slotProps.stack" stack-x="2" />
       </template>
     </FontAwesomeIcon>
 
     <FontAwesomeIcon stack shake>
       <template #default="slotProps">
-        <FontAwesomeIcon
-          name="camera"
-          :stack-child="slotProps.stack"
-          stack-x="1"
-        />
+        <FontAwesomeIcon name="camera" :stack-child="slotProps.stack" stack-x="1" />
         <FontAwesomeIcon
           name="ban"
           :stack-child="slotProps.stack"
@@ -300,11 +212,7 @@
     </FontAwesomeIcon>
     <FontAwesomeIcon stack rotate="45">
       <template #default="slotProps">
-        <FontAwesomeIcon
-          name="square"
-          :stack-child="slotProps.stack"
-          stack-x="2"
-        />
+        <FontAwesomeIcon name="square" :stack-child="slotProps.stack" stack-x="2" />
         <FontAwesomeIcon
           name="terminal"
           rotate="-45"

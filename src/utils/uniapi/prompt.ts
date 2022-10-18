@@ -9,10 +9,7 @@
  * @param options
  * @constructor
  */
-export function Toast(
-  title: string,
-  options?: Partial<UniApp.ShowToastOptions>,
-) {
+export function Toast(title: string, options?: Partial<UniApp.ShowToastOptions>) {
   uni.showToast({
     title,
     duration: 1500,
@@ -35,10 +32,7 @@ export function HideToast() {
  * @param options
  * @constructor
  */
-export function Loading(
-  title: string,
-  options?: Partial<UniApp.ShowLoadingOptions>,
-) {
+export function Loading(title: string, options?: Partial<UniApp.ShowLoadingOptions>) {
   uni.showLoading({
     title,
     mask: true,

@@ -1,8 +1,4 @@
-import {
-  HOME_PAGE,
-  NAVIGATE_TYPE_LIST,
-  NOT_FOUND_PAGE,
-} from '@/enums/routerEnum';
+import { HOME_PAGE, NAVIGATE_TYPE_LIST, NOT_FOUND_PAGE } from '@/enums/routerEnum';
 import { useAuthStore } from '@/stores/modules/auth';
 import { isIgnoreAuth, jumpLogin } from '@/utils/router/constant';
 

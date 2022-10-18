@@ -50,9 +50,7 @@ const fontFamilyList = [
   },
 ];
 
-function LoadFontFace(
-  data: UniApp.LoadFontFaceOptions & { weight?: string; global?: boolean },
-) {
+function LoadFontFace(data: UniApp.LoadFontFaceOptions & { weight?: string; global?: boolean }) {
   return new Promise((resolve, reject) => {
     uni.loadFontFace({
       global: true,
@@ -99,9 +97,7 @@ export function dynamicLoadFontFace() {
  */
 export function loadFontFaceFromLocal() {
   fontFamilyList.forEach(fontFamily => {
-    const source = `url(${plus.io.convertLocalFileSystemURL(
-      `_www/static/fonts${fontFamily.source}`,
-    )})`;
+    const source = `url(${plus.io.convertLocalFileSystemURL(`_www/static/fonts${fontFamily.source}`)})`;
     LoadFontFace({
       ...fontFamily,
       source,

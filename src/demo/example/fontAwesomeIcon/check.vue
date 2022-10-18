@@ -196,21 +196,10 @@
     </view>
     <view class="check-wrap" :class="{ focus: isFocus }">
       <view class="input-wrap">
-        <input
-          placeholder="Icon Name"
-          type="text"
-          @focus="onFocus"
-          @blur="onBlur"
-          v-model.trim.lazy="iconName"
-        />
+        <input placeholder="Icon Name" type="text" @focus="onFocus" @blur="onBlur" v-model.trim.lazy="iconName" />
       </view>
       <view class="icon-wrap">
-        <FontAwesomeIcon
-          @click="onRandom"
-          name="shuffle"
-          mode="duotone"
-          color="#2F72EFFF"
-        />
+        <FontAwesomeIcon @click="onRandom" name="shuffle" mode="duotone" color="#2F72EFFF" />
       </view>
     </view>
     <view class="attribute-wrap">
@@ -224,24 +213,13 @@
         <view class="label">风格(mode): </view>
         <view class="attribute-list">
           <template v-for="(mode, index) in modeList" :key="index">
-            <view
-              class="attribute-item"
-              @click="setAttribute"
-              data-k="mode"
-              :data-v="mode"
-            >
-              <FontAwesomeIcon
-                mode="regular"
-                :name="attribute.mode == mode ? 'circle-dot' : 'circle'"
-              /><text>{{ mode }}</text>
+            <view class="attribute-item" @click="setAttribute" data-k="mode" :data-v="mode">
+              <FontAwesomeIcon mode="regular" :name="attribute.mode == mode ? 'circle-dot' : 'circle'" /><text
+                >{{ mode }}</text
+              >
             </view>
           </template>
-          <view
-            class="attribute-item"
-            style="width: 50%"
-            @click="setAttribute"
-            data-k="sharp"
-          >
+          <view class="attribute-item" style="width: 50%" @click="setAttribute" data-k="sharp">
             <FontAwesomeIcon
               :mode="attribute.sharp ? 'solid' : 'regular'"
               :name="attribute.sharp ? 'square-check' : 'square'"
@@ -253,16 +231,10 @@
         <view class="label">颜色(color): </view>
         <view class="attribute-list">
           <template v-for="(item, index) in colors" :key="index">
-            <view
-              class="attribute-item"
-              @click="setAttribute"
-              data-k="color"
-              :data-v="item.color"
-            >
-              <FontAwesomeIcon
-                mode="regular"
-                :name="attribute.color == item.color ? 'circle-dot' : 'circle'"
-              /><text>{{ item.name }}</text>
+            <view class="attribute-item" @click="setAttribute" data-k="color" :data-v="item.color">
+              <FontAwesomeIcon mode="regular" :name="attribute.color == item.color ? 'circle-dot' : 'circle'" /><text
+                >{{ item.name }}</text
+              >
             </view>
           </template>
         </view>
@@ -270,25 +242,11 @@
       <view class="size flex-row">
         <view class="label">大小(size)[rpx]:</view>
         <view class="flex-row input-wrap">
-          <view
-            class="icon-warp minus"
-            @click="onNumberChange"
-            data-k="size"
-            data-type="minus"
-          >
+          <view class="icon-warp minus" @click="onNumberChange" data-k="size" data-type="minus">
             <FontAwesomeIcon name="minus" bg-color="#C3C6D1" />
           </view>
-          <input
-            class="attribute-input"
-            type="number"
-            v-model.trim.lazy="attribute.size"
-          />
-          <view
-            class="icon-warp plus"
-            @click="onNumberChange"
-            data-k="size"
-            data-type="plus"
-          >
+          <input class="attribute-input" type="number" v-model.trim.lazy="attribute.size" />
+          <view class="icon-warp plus" @click="onNumberChange" data-k="size" data-type="plus">
             <FontAwesomeIcon name="plus" bg-color="#C3C6D1" />
           </view>
         </view>
@@ -296,25 +254,11 @@
       <view class="rotate flex-row">
         <view class="label">旋转角度(rotate)[deg]: </view>
         <view class="flex-row input-wrap">
-          <view
-            class="icon-warp minus"
-            @click="onNumberChange"
-            data-k="rotate"
-            data-type="minus"
-          >
+          <view class="icon-warp minus" @click="onNumberChange" data-k="rotate" data-type="minus">
             <FontAwesomeIcon name="minus" bg-color="#C3C6D1" />
           </view>
-          <input
-            class="attribute-input"
-            type="number"
-            v-model.trim.lazy="attribute.rotate"
-          />
-          <view
-            class="icon-warp plus"
-            @click="onNumberChange"
-            data-k="rotate"
-            data-type="plus"
-          >
+          <input class="attribute-input" type="number" v-model.trim.lazy="attribute.rotate" />
+          <view class="icon-warp plus" @click="onNumberChange" data-k="rotate" data-type="plus">
             <FontAwesomeIcon name="plus" bg-color="#C3C6D1" />
           </view>
         </view>
@@ -344,12 +288,7 @@
         <view class="label">动画: </view>
         <view class="attribute-list">
           <template v-for="(item, index) in animations" :key="index">
-            <view
-              class="attribute-item"
-              style="width: 50%"
-              @click="setAttribute"
-              :data-k="item.value"
-            >
+            <view class="attribute-item" style="width: 50%" @click="setAttribute" :data-k="item.value">
               <FontAwesomeIcon
                 :mode="attribute[item.value] ? 'solid' : 'regular'"
                 :name="attribute[item.value] ? 'square-check' : 'square'"
