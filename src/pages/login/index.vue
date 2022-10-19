@@ -4,6 +4,7 @@
   import { useAuthStore } from '@/stores/modules/auth';
   import { Toast } from '@/utils/uniapi/prompt';
   import { useRouter } from '@/hooks/router';
+  import to from 'await-to-js';
 
   const redirect = ref<string | undefined>(undefined);
   onLoad(query => {
@@ -17,8 +18,11 @@
     password: 'Vue3_Ts_Vite',
   });
   const authStore = useAuthStore();
-  const submit = (e: any) => {
-    authStore.login(e.detail.value).then(() => {
+  const submit = async (e: any) => {
+    const [err, data] = await to(authStore.login(e.detail.value));
+    if (!err) {
+      console.log(data);
+
       Toast('登录成功', { duration: 1500 });
       setTimeout(() => {
         if (redirect.value) {
@@ -27,7 +31,9 @@
         }
         router.pushTab('/pages/about/index');
       }, 1500);
-    });
+    } else {
+      console.log(err);
+    }
   };
 </script>
 

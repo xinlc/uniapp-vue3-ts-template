@@ -29,6 +29,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.40.0
   '@typescript-eslint/parser': ^5.40.0
   autoprefixer: ^10.4.12
+  await-to-js: ^3.0.0
   crypto-js: ^4.1.1
   eslint: ^8.25.0
   eslint-config-prettier: ^8.5.0
@@ -71,6 +72,7 @@ dependencies:
   '@dcloudio/uni-quickapp-webview': registry.npmmirror.com/@dcloudio/uni-quickapp-webview/3.0.0-alpha-3060420220922008_postcss@8.4.18+vue@3.2.40
   '@dcloudio/uni-ui': registry.npmmirror.com/@dcloudio/uni-ui/1.4.22
   '@fortawesome/fontawesome-free': registry.npmmirror.com/@fortawesome/fontawesome-free/6.2.0
+  await-to-js: registry.npmmirror.com/await-to-js/3.0.0
   crypto-js: registry.npmmirror.com/crypto-js/4.1.1
   lodash-es: registry.npmmirror.com/lodash-es/4.17.21
   luch-request: registry.npmmirror.com/luch-request/3.0.8
@@ -1024,6 +1026,50 @@ packages:
       - vue
     dev: false
 
+  registry.npmmirror.com/@dcloudio/uts-darwin-arm64/3.0.0-alpha-3060420220922008:
+    resolution: {integrity: sha512-6A+bVuYwPOCeQTVHpQ8B4kOfXY5pNRzTGpLukn8ZgxBJb+R5rv+/sx2ceEpbSXdYLsFYj2S0/s3yoU8cW42PqQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@dcloudio/uts-darwin-arm64/-/uts-darwin-arm64-3.0.0-alpha-3060420220922008.tgz}
+    name: '@dcloudio/uts-darwin-arm64'
+    version: 3.0.0-alpha-3060420220922008
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  registry.npmmirror.com/@dcloudio/uts-darwin-x64/3.0.0-alpha-3060420220922008:
+    resolution: {integrity: sha512-/uwUpE03Nwx/8VLRSRFNW3LsIxeCvg3NRFmHvxdPmZQSohVu/IDbposmJsZWO24ORYwBsqx3teEs4WctHw+A6g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@dcloudio/uts-darwin-x64/-/uts-darwin-x64-3.0.0-alpha-3060420220922008.tgz}
+    name: '@dcloudio/uts-darwin-x64'
+    version: 3.0.0-alpha-3060420220922008
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  registry.npmmirror.com/@dcloudio/uts-win32-ia32-msvc/3.0.0-alpha-3060420220922008:
+    resolution: {integrity: sha512-Bp11TOfjVOoRtVHPw2N5X7y9u0Dcbgg2abYhrLN756eageqg/ulWg/JERH55fbeX7F/5fWvvC9vGSVqLIFYddw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@dcloudio/uts-win32-ia32-msvc/-/uts-win32-ia32-msvc-3.0.0-alpha-3060420220922008.tgz}
+    name: '@dcloudio/uts-win32-ia32-msvc'
+    version: 3.0.0-alpha-3060420220922008
+    engines: {node: '>=10'}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  registry.npmmirror.com/@dcloudio/uts-win32-x64-msvc/3.0.0-alpha-3060420220922008:
+    resolution: {integrity: sha512-hylabbGvUK5rActb6BLnE6nxmsaQjHSwV9bBO1X+In/mOoVmRZKqTzoLW5hCM96OtW0Vv7dpehYxsGPe+/X84Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@dcloudio/uts-win32-x64-msvc/-/uts-win32-x64-msvc-3.0.0-alpha-3060420220922008.tgz}
+    name: '@dcloudio/uts-win32-x64-msvc'
+    version: 3.0.0-alpha-3060420220922008
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
   registry.npmmirror.com/@dcloudio/uts/3.0.0-alpha-3060420220922008:
     resolution: {integrity: sha512-dC7dx2SDAIS9bbUdcVQmHk97BLvicCIx5kdqyFZIX6RCZ+pykc8KDbVgOVfw8mUZkNWHLSaBdqff/nG4dYw8uw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@dcloudio/uts/-/uts-3.0.0-alpha-3060420220922008.tgz}
     name: '@dcloudio/uts'
@@ -1035,6 +1081,11 @@ packages:
       fast-glob: registry.npmmirror.com/fast-glob/3.2.12
       fs-extra: registry.npmmirror.com/fs-extra/10.1.0
       picocolors: registry.npmmirror.com/picocolors/1.0.0
+    optionalDependencies:
+      '@dcloudio/uts-darwin-arm64': registry.npmmirror.com/@dcloudio/uts-darwin-arm64/3.0.0-alpha-3060420220922008
+      '@dcloudio/uts-darwin-x64': registry.npmmirror.com/@dcloudio/uts-darwin-x64/3.0.0-alpha-3060420220922008
+      '@dcloudio/uts-win32-ia32-msvc': registry.npmmirror.com/@dcloudio/uts-win32-ia32-msvc/3.0.0-alpha-3060420220922008
+      '@dcloudio/uts-win32-x64-msvc': registry.npmmirror.com/@dcloudio/uts-win32-x64-msvc/3.0.0-alpha-3060420220922008
     dev: false
 
   registry.npmmirror.com/@dcloudio/vite-plugin-uni/3.0.0-alpha-3060420220922008_r5lp53inseu3s6fzmukl7hmewi:
@@ -2049,6 +2100,13 @@ packages:
       picocolors: registry.npmmirror.com/picocolors/1.0.0
       postcss: registry.npmmirror.com/postcss/8.4.18
       postcss-value-parser: registry.npmmirror.com/postcss-value-parser/4.2.0
+
+  registry.npmmirror.com/await-to-js/3.0.0:
+    resolution: {integrity: sha512-zJAaP9zxTcvTHRlejau3ZOY4V7SRpiByf3/dxx2uyKxxor19tpmpV2QRsTKikckwhaPmr2dVpxxMr7jOCYVp5g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/await-to-js/-/await-to-js-3.0.0.tgz}
+    name: await-to-js
+    version: 3.0.0
+    engines: {node: '>=6.0.0'}
+    dev: false
 
   registry.npmmirror.com/babel-code-frame/6.26.0:
     resolution: {integrity: sha512-XqYMR2dfdGMW+hd0IUZ2PwK+fGeFkOxZJ0wY+JaQAHzt1Zx8LcvpiZD2NiGkEG8qx0CfkAOr5xt76d1e8vG90g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/babel-code-frame/-/babel-code-frame-6.26.0.tgz}
