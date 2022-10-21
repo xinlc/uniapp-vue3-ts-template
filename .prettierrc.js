@@ -25,14 +25,33 @@ module.exports = {
   // range是format执行的范围，可以选执行一个文件的一部分，默认的设置是整个文件（rangeStart: <int>  rangeEnd: <int>）
   rangeStart: 0,
   rangeEnd: Infinity,
+  // 不需要写文件开头的 @prettier
+  requirePragma: false,
+  // 不需要自动在文件开头插入 @prettier
+  insertPragma: false,
   // vue script和style标签中是否缩进,开启可能会破坏编辑器的代码折叠
   vueIndentScriptAndStyle: true,
   // endOfLine: "<lf|crlf|cr|auto>" 行尾换行符,默认是lf,
   endOfLine: 'auto',
-  // ignore 对HTML全局空白不敏感
+  // ignore 对HTML全局空白不敏感, 根据显示样式决定 html 要不要折行 css
   htmlWhitespaceSensitivity: 'strict',
   // embeddedLanguageFormatting: "off",默认是auto,控制被引号包裹的代码是否进行格式化
   embeddedLanguageFormatting: 'off',
-  // proseWrap: "<always|never|preserve>"
+  // 使用默认的折行标准 proseWrap: "<always|never|preserve>"
   proseWrap: 'never',
+  overrides: [
+    {
+      files: ['*.json5'],
+      options: {
+        singleQuote: false,
+        quoteProps: 'preserve',
+      },
+    },
+    {
+      files: ['*.yml'],
+      options: {
+        singleQuote: false,
+      },
+    },
+  ],
 };

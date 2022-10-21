@@ -3,7 +3,7 @@ uni-app Vue3 Vite3 Pinia TypeScript 基础框架
 
 ## 特性
 
-- **最新技术栈**：使用 Vue3/Vite3/Pinia/TypeScript/Windicss 等前端前沿技术开发;
+- **最新技术栈**：使用 Vue3/Vite3/Pinia/TypeScript/Windicss/Unocss 等前端前沿技术开发;
 - **Eslint/Prettier**：规范代码格式，统一编码;
 - **路由拦截**：基于 uni.addInterceptor 进行路由拦截;
 - **请求拦截**：核心使用 [luch-request](https://github.com/lei-mu/luch-request)，支持请求和响应拦截等;
@@ -140,3 +140,4 @@ pnpm build:h5
 - [luch-request](https://github.com/lei-mu/luch-request) - API 请求库
 - [Windi CSS](https://github.com/windicss/windicss) - ACSS 框架
 - [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import) - 自动导入
+- [Unocss](https://github.com/unocss/unocss) - 原子 CSS 引擎。

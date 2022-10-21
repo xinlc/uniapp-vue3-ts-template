@@ -13,6 +13,10 @@
   const jumpPageC = () => {
     router.push('/pagesC/index/index');
   };
+
+  const jumpPageUno = () => {
+    router.push('/pagesUno/splash/splash');
+  };
 </script>
 
 <template>
@@ -26,6 +30,10 @@
     </view>
     <view class="flex-row justify-center">
       <BasicButton @click="jumpPageC">jumpPageC → </BasicButton>
+    </view>
+
+    <view class="flex-row justify-center">
+      <BasicButton @click="jumpPageUno">jumpPageUno → </BasicButton>
     </view>
 
     <view class="flex-row justify-center">

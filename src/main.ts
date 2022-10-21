@@ -11,6 +11,8 @@ import i18n from '@/language/index';
 // import 'virtual:windi-components.css';
 // import 'virtual:windi-utilities.css';
 
+import 'uno.css';
+
 export function createApp() {
   const app = createSSRApp(App);
 

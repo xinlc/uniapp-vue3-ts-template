@@ -8,6 +8,7 @@ import eslintPlugin from 'vite-plugin-eslint';
 import { viteMockServe } from 'vite-plugin-mock';
 // import Components from 'unplugin-vue-components/vite';
 import AutoImport from 'unplugin-auto-import/vite';
+import UnoCSS from 'unocss/vite';
 
 // import WindiCSS from 'vite-plugin-windicss';
 // import MiniProgramTailwind from '@dcasia/mini-program-tailwind-webpack-plugin/rollup';
@@ -87,6 +88,10 @@ const viteConfig = defineConfig((mode: ConfigEnv) => {
         watchFiles: true, // 监视文件更改
       }),
 
+      // https://github.com/unocss/unocss
+      UnoCSS(),
+
+      // 建议用 easycom
       // https://github.com/antfu/unplugin-vue-components
       // Components({
       //   dirs: ['src/components'],
