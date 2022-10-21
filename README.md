@@ -8,6 +8,7 @@ uni-app Vue3 Vite3 Pinia TypeScript 基础框架
 - **路由拦截**：基于 uni.addInterceptor 进行路由拦截;
 - **请求拦截**：核心使用 [luch-request](https://github.com/lei-mu/luch-request)，支持请求和响应拦截等;
 - **缓存加密**：使用AES加密缓存，可设置区分在开发或生成环境中是否加密;
+- **自动导入**：自动导入 vue3 的 hooks 等。
 
 ## 目录结构
 
@@ -138,3 +139,4 @@ pnpm build:h5
 - [TypeScript](https://github.com/microsoft/TypeScript) - TS
 - [luch-request](https://github.com/lei-mu/luch-request) - API 请求库
 - [Windi CSS](https://github.com/windicss/windicss) - ACSS 框架
+- [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import) - 自动导入

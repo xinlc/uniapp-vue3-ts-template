@@ -6,6 +6,9 @@ import { resolve } from 'path';
 import uni from '@dcloudio/vite-plugin-uni';
 import eslintPlugin from 'vite-plugin-eslint';
 import { viteMockServe } from 'vite-plugin-mock';
+// import Components from 'unplugin-vue-components/vite';
+import AutoImport from 'unplugin-auto-import/vite';
+
 // import WindiCSS from 'vite-plugin-windicss';
 // import MiniProgramTailwind from '@dcasia/mini-program-tailwind-webpack-plugin/rollup';
 
@@ -82,6 +85,22 @@ const viteConfig = defineConfig((mode: ConfigEnv) => {
         prodEnabled: prodEnabled, // 生产打包开关
         supportTs: true, // 打开后，可以读取 ts 文件模块。 请注意，打开后将无法监视.js 文件。
         watchFiles: true, // 监视文件更改
+      }),
+
+      // https://github.com/antfu/unplugin-vue-components
+      // Components({
+      //   dirs: ['src/components'],
+      //   extensions: ['vue', 'ts', 'tsx'],
+      //   dts: 'src/components.d.ts',
+      //   deep: true,
+      // }),
+
+      // https://github.com/antfu/unplugin-auto-import
+      AutoImport({
+        imports: ['vue', 'pinia', 'uni-app'],
+        dts: 'src/auto-imports.d.ts',
+        dirs: ['src/hooks', 'src/stores/modules'],
+        vueTemplate: true,
       }),
       // WindiCSS({
       //   scan: {

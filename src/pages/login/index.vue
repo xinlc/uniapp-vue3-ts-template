@@ -1,9 +1,9 @@
 <script setup lang="ts">
-  import { reactive, ref } from 'vue';
+  // import { reactive, ref } from 'vue';
   import { onLoad } from '@dcloudio/uni-app';
-  import { useAuthStore } from '@/stores/modules/auth';
+  // import { useAuthStore } from '@/stores/modules/auth';
   import { Toast } from '@/utils/uniapi/prompt';
-  import { useRouter } from '@/hooks/router';
+  // import { useRouter } from '@/hooks/router';
   import to from 'await-to-js';
 
   const redirect = ref<string | undefined>(undefined);
