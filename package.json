@@ -40,8 +40,11 @@
     "prepare": "husky install",
     "lint": "eslint --cache --max-warnings 0  \"src/**/*.{vue,ts}\" --fix",
     "lint:fix": "eslint --ext .ts,tsx,vue src/** --no-error-on-unmatched-pattern --fix",
+    "lint:staged": "lint-staged",
     "prettier": "prettier --write \"src/**/*.{js,ts,json,css,scss,vue}\"",
-    "mock": "cd mock && ts-node-dev mock.ts"
+    "mock": "cd mock && ts-node-dev mock.ts",
+    "cz": "cz",
+    "commit": "git-cz"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-alpha-3060420220922008",
@@ -70,6 +73,8 @@
     "vue-i18n": "^9.2.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
     "@dcasia/mini-program-tailwind-webpack-plugin": "^1.5.6",
     "@dcloudio/types": "^3.0.14",
     "@dcloudio/uni-automator": "3.0.0-alpha-3060420220922008",
@@ -85,6 +90,10 @@
     "@typescript-eslint/eslint-plugin": "^5.40.0",
     "@typescript-eslint/parser": "^5.40.0",
     "autoprefixer": "^10.4.12",
+    "commitizen": "^4.2.5",
+    "commitlint-config-cz": "^0.13.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^7.0.0",
     "eslint": "^8.25.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -107,15 +116,14 @@
     "vite-plugin-windicss": "^1.8.8",
     "windicss": "^3.5.6"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
     }
   },
   "lint-staged": {
     "src/**/*.{js,jsx,vue,ts,tsx}": [
-      "prettier --write",
-      "git add"
+      "eslint"
     ]
   }
 }
