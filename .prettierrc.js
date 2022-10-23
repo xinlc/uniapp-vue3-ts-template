@@ -36,7 +36,7 @@ module.exports = {
   // ignore 对HTML全局空白不敏感, 根据显示样式决定 html 要不要折行 css
   htmlWhitespaceSensitivity: 'strict',
   // embeddedLanguageFormatting: "off",默认是auto,控制被引号包裹的代码是否进行格式化
-  embeddedLanguageFormatting: 'off',
+  embeddedLanguageFormatting: 'auto',
   // 使用默认的折行标准 proseWrap: "<always|never|preserve>"
   proseWrap: 'never',
   overrides: [

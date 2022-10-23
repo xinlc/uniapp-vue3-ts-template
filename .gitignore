@@ -31,11 +31,14 @@ lerna-debug.log*
 # 要提交 .env 来确保 jit v2 的开发 watch mode
 !.env
 
-src/ignore
-
 # auto-generated
 
 src/auto-imports.d.ts
 src/components.d.ts
 src/vitepress-auto-import.d.ts
 src/vitepress-components.d.ts
+
+# Other
+
+src/ignore
+.eslintcache

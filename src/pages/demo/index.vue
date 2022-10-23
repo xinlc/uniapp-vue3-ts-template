@@ -22,21 +22,21 @@
 <template>
   <AppProvider>
     <view class="container"> 页面构建中... </view>
-    <view class="flex-row justify-center">
+    <view class="flex justify-center">
       <BasicButton @click="jumpList1">List1 → </BasicButton>
     </view>
-    <view class="flex-row justify-center">
+    <view class="flex justify-center">
       <BasicButton @click="jumpFontAwesomeIcon">FontAwesomeIcon → </BasicButton>
     </view>
-    <view class="flex-row justify-center">
+    <view class="flex justify-center">
       <BasicButton @click="jumpPageC">jumpPageC → </BasicButton>
     </view>
 
-    <view class="flex-row justify-center">
+    <view class="flex justify-center">
       <BasicButton @click="jumpPageUno">jumpPageUno → </BasicButton>
     </view>
 
-    <view class="flex-row justify-center">
+    <view class="flex justify-center">
       测试 uni-ui ->
       <uni-icons type="contact" size="30"></uni-icons>
       <uni-badge text="2" type="success"></uni-badge>

@@ -111,6 +111,15 @@ pnpm dev:dev:mp-weixin
 pnpm build:h5
 ```
 
+## 开发工具
+
+### VsCode 插件
+
+- volar
+- ESLint
+- prettier
+- UnoCSS
+
 ## Git 提交规范
 
 - 参考 [vue](https://github.com/vuejs/vue/blob/dev/.github/COMMIT_CONVENTION.md) 规范 ([Angular](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular))
@@ -140,4 +149,4 @@ pnpm build:h5
 - [luch-request](https://github.com/lei-mu/luch-request) - API 请求库
 - [Windi CSS](https://github.com/windicss/windicss) - ACSS 框架
 - [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import) - 自动导入
-- [Unocss](https://github.com/unocss/unocss) - 原子 CSS 引擎。
+- [UnoCSS](https://github.com/unocss/unocss) - 原子 CSS 引擎。

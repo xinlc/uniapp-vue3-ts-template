@@ -5,6 +5,8 @@
   import { Toast } from '@/utils/uniapi/prompt';
   // import { useRouter } from '@/hooks/router';
   import to from 'await-to-js';
+  import type { LoginModel } from '@/api/models/authModel';
+  import type { HttpResponse } from 'luch-request';
 
   const redirect = ref<string | undefined>(undefined);
   onLoad(query => {
@@ -19,21 +21,22 @@
   });
   const authStore = useAuthStore();
   const submit = async (e: any) => {
-    const [err, data] = await to(authStore.login(e.detail.value));
-    if (!err) {
-      console.log(data);
-
-      Toast('登录成功', { duration: 1500 });
-      setTimeout(() => {
-        if (redirect.value) {
-          router.go(redirect.value, { replace: true });
-          return;
-        }
-        router.pushTab('/pages/about/index');
-      }, 1500);
-    } else {
+    const [err, data] = await to<LoginModel, HttpResponse>(authStore.login(e.detail.value));
+    if (err) {
+      Toast(err.errMsg, { duration: 1500 });
       console.log(err);
+      return;
     }
+
+    console.log(data);
+    Toast('登录成功', { duration: 1500 });
+    setTimeout(() => {
+      if (redirect.value) {
+        router.go(redirect.value, { replace: true });
+        return;
+      }
+      router.pushTab('/pages/about/index');
+    }, 1500);
   };
 </script>
 

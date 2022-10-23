@@ -1,9 +1,9 @@
 <script setup lang="ts">
   interface Props {
-    type?: 'default' | 'success' | 'error' | 'warning' | 'primary'
-    bg?: string
-    icon?: string
-    disabled?: boolean
+    type?: 'default' | 'success' | 'error' | 'warning' | 'primary';
+    bg?: string;
+    icon?: string;
+    disabled?: boolean;
   }
 
   withDefaults(defineProps<Props>(), {

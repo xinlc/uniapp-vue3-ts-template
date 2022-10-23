@@ -89,6 +89,7 @@ const viteConfig = defineConfig((mode: ConfigEnv) => {
       }),
 
       // https://github.com/unocss/unocss
+      // see unocss.config.ts for config
       UnoCSS(),
 
       // 建议用 easycom

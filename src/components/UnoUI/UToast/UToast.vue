@@ -4,7 +4,7 @@
   const { customBarHeight } = storeToRefs(useAppStore());
 
   const timer = ref<number | undefined>(undefined);
-  const show = ref(false)
+  const show = ref(false);
   const notifyType = ref<UToastType>('default');
   const message = ref('');
 
