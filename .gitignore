@@ -33,10 +33,10 @@ lerna-debug.log*
 
 # auto-generated
 
-src/auto-imports.d.ts
-src/components.d.ts
-src/vitepress-auto-import.d.ts
-src/vitepress-components.d.ts
+src/types/auto-imports.d.ts
+src/types/components.d.ts
+src/types/vitepress-auto-import.d.ts
+src/types/vitepress-components.d.ts
 
 # Other
 

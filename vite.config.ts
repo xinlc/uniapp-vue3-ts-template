@@ -97,14 +97,14 @@ const viteConfig = defineConfig((mode: ConfigEnv) => {
       // Components({
       //   dirs: ['src/components'],
       //   extensions: ['vue', 'ts', 'tsx'],
-      //   dts: 'src/components.d.ts',
+      //   dts: 'src/types/components.d.ts',
       //   deep: true,
       // }),
 
       // https://github.com/antfu/unplugin-auto-import
       AutoImport({
         imports: ['vue', 'pinia', 'uni-app'],
-        dts: 'src/auto-imports.d.ts',
+        dts: 'src/types/auto-imports.d.ts',
         dirs: ['src/hooks', 'src/stores/modules'],
         vueTemplate: true,
       }),

@@ -1,5 +1,6 @@
-declare interface API<T = any> {
+declare interface ApiResult<T = any> {
   code: number;
+  success: boolean;
   data?: T;
-  message: string;
+  msg: string;
 }

@@ -21,9 +21,9 @@
   });
   const authStore = useAuthStore();
   const submit = async (e: any) => {
-    const [err, data] = await to<LoginModel, HttpResponse>(authStore.login(e.detail.value));
+    const [err, data] = await to<LoginModel, ApiResult>(authStore.login(e.detail.value));
     if (err) {
-      Toast(err.errMsg, { duration: 1500 });
+      Toast(err.msg, { duration: 1500 });
       console.log(err);
       return;
     }

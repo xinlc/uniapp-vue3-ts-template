@@ -3,10 +3,7 @@
   import FontAwesomeIcon from '@/components/FontAwesomeIcon/index.vue';
   import { computed, reactive, ref, watch } from 'vue';
   import { random } from 'lodash-es';
-  import {
-    brandIcons,
-    classicIcons,
-  } from '@/demo/example/fontAwesomeIcon/icons';
+  import { brandIcons, classicIcons } from '@/demo/example/fontAwesomeIcon/icons';
   import { SetClipboardData } from '@/utils/uniapi';
   const attribute = reactive({
     mode: 'solid',
@@ -114,10 +111,7 @@
     (newValue, oldValue) => {
       const newValueIndex = modeList.findIndex(item => item == newValue);
       const oldValueIndex = modeList.findIndex(item => item == oldValue);
-      if (
-        (newValueIndex == 5 && oldValueIndex < 5) ||
-        (oldValueIndex == 5 && newValueIndex < 5)
-      ) {
+      if ((newValueIndex == 5 && oldValueIndex < 5) || (oldValueIndex == 5 && newValueIndex < 5)) {
         onRandom();
       }
     },
@@ -214,9 +208,9 @@
         <view class="attribute-list">
           <template v-for="(mode, index) in modeList" :key="index">
             <view class="attribute-item" @click="setAttribute" data-k="mode" :data-v="mode">
-              <FontAwesomeIcon mode="regular" :name="attribute.mode == mode ? 'circle-dot' : 'circle'" /><text
-                >{{ mode }}</text
-              >
+              <FontAwesomeIcon mode="regular" :name="attribute.mode == mode ? 'circle-dot' : 'circle'" /><text>{{
+                mode
+              }}</text>
             </view>
           </template>
           <view class="attribute-item" style="width: 50%" @click="setAttribute" data-k="sharp">
@@ -232,9 +226,9 @@
         <view class="attribute-list">
           <template v-for="(item, index) in colors" :key="index">
             <view class="attribute-item" @click="setAttribute" data-k="color" :data-v="item.color">
-              <FontAwesomeIcon mode="regular" :name="attribute.color == item.color ? 'circle-dot' : 'circle'" /><text
-                >{{ item.name }}</text
-              >
+              <FontAwesomeIcon mode="regular" :name="attribute.color == item.color ? 'circle-dot' : 'circle'" /><text>{{
+                item.name
+              }}</text>
             </view>
           </template>
         </view>
@@ -276,9 +270,7 @@
             >
               <FontAwesomeIcon
                 mode="regular"
-                :name="
-                  attribute.rotateFlip == item.value ? 'circle-dot' : 'circle'
-                "
+                :name="attribute.rotateFlip == item.value ? 'circle-dot' : 'circle'"
               /><text>{{ item.name }}</text>
             </view>
           </template>

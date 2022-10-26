@@ -1,12 +1,5 @@
 <script lang="ts" setup>
-  import {
-    ref,
-    reactive,
-    watch,
-    onBeforeMount,
-    onMounted,
-    nextTick,
-  } from 'vue';
+  import { ref, reactive, watch, onBeforeMount, onMounted, nextTick } from 'vue';
 
   import { useRouter } from '@/hooks/router';
 

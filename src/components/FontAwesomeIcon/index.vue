@@ -21,9 +21,7 @@
   const singleFade = computed(() => !props.beat && props.fade);
   const beatFade = computed(() => props.beat && props.fade);
   const count = computed(() => {
-    return props.counter > props.counterMax
-      ? `${props.counterMax}+`
-      : props.counter;
+    return props.counter > props.counterMax ? `${props.counterMax}+` : props.counter;
   });
   const wrapClassObject = computed(() => {
     return [
@@ -69,16 +67,12 @@
         ? {
             '--fa-bounce-rebound': props.bounceConfig?.rebound || '-0.125em',
             '--fa-bounce-height': props.bounceConfig?.height || '-0.5em',
-            '--fa-bounce-start-scale-x':
-              props.bounceConfig?.startScaleX || '1.1',
-            '--fa-bounce-start-scale-y':
-              props.bounceConfig?.startScaleY || '0.9',
+            '--fa-bounce-start-scale-x': props.bounceConfig?.startScaleX || '1.1',
+            '--fa-bounce-start-scale-y': props.bounceConfig?.startScaleY || '0.9',
             '--fa-bounce-jump-scale-x': props.bounceConfig?.jumpScaleX || '0.9',
             '--fa-bounce-jump-scale-y': props.bounceConfig?.jumpScaleY || '1.1',
-            '--fa-bounce-land-scale-x':
-              props.bounceConfig?.landScaleX || '1.05',
-            '--fa-bounce-land-scale-y':
-              props.bounceConfig?.landScaleY || '0.95',
+            '--fa-bounce-land-scale-x': props.bounceConfig?.landScaleX || '1.05',
+            '--fa-bounce-land-scale-y': props.bounceConfig?.landScaleY || '0.95',
           }
         : {},
       props.flip
@@ -165,9 +159,7 @@
     <template v-else>
       <text class="icon" :style="iconStyleObject" :class="iconClassObject" />
     </template>
-    <text v-if="props.counter" class="counter" :style="counterStyleObject">{{
-      count
-    }}</text>
+    <text v-if="props.counter" class="counter" :style="counterStyleObject">{{ count }}</text>
   </view>
 </template>
 <style lang="scss" scoped>
