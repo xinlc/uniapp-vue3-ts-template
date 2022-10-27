@@ -17,6 +17,18 @@ export function login(params: LoginParams) {
   });
 }
 
+// /**
+//  * 登录
+//  * @param params
+//  */
+// export function login(params: LoginParams) {
+//   return request.post<ApiResult<LoginModel>>(LOGIN, params, {
+//     custom: {
+//       auth: false,
+//     },
+//   });
+// }
+
 /**
  * 登出
  */

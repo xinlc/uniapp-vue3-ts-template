@@ -4,9 +4,11 @@
   // import { useAuthStore } from '@/stores/modules/auth';
   import { Toast } from '@/utils/uniapi/prompt';
   // import { useRouter } from '@/hooks/router';
-  import to from 'await-to-js';
   import type { LoginModel } from '@/api/models/authModel';
   import type { HttpResponse } from 'luch-request';
+  import to from 'await-to-js';
+  import toApi from '@/utils/api';
+  import { login } from '@/api/auth';
 
   const redirect = ref<string | undefined>(undefined);
   onLoad(query => {
@@ -21,14 +23,19 @@
   });
   const authStore = useAuthStore();
   const submit = async (e: any) => {
+    // const [err, data] = await to<HttpResponse<LoginModel>, ApiResult>(authStore.login(e.detail.value));
+    // const [err, data] = await to(authStore.login(e.detail.value));
+    // const [err, _] = await to(authStore.login(e.detail.value));
     const [err, data] = await to<LoginModel, ApiResult>(authStore.login(e.detail.value));
+    // const [err, data] = await toApi(login(e.detail.value));
+
     if (err) {
-      Toast(err.msg, { duration: 1500 });
       console.log(err);
+      Toast(err.msg);
       return;
     }
 
-    console.log(data);
+    // console.log(data);
     Toast('登录成功', { duration: 1500 });
     setTimeout(() => {
       if (redirect.value) {

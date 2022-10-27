@@ -53,13 +53,23 @@ request.interceptors.response.use(
     if (code === ResultEnum.SUCCESS) {
       return resData as any;
     }
-    Toast(message);
+    // Toast(message);
     return Promise.reject(resData);
   },
-  response =>
+  response => {
+    // console.log(response);
+    const { data: resData } = response;
+
+    // 兼容 ApiResult
+    if (resData && resData.message) {
+      // resData.msg = resData.message;
+      resData.msg = '请求异常';
+    }
+
     // 请求错误做点什么。可以使用async await 做异步操作
     // error('Request Error!');
-    Promise.reject(response),
+    return Promise.reject(resData);
+  },
 );
 
 export { request };
