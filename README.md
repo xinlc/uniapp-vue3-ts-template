@@ -84,11 +84,11 @@ uni-app Vue3 Vite3 Pinia TypeScript 基础框架
 - 安装依赖
 
 ```bash
+# nodejs v18.12.x
 npx degit xinlc/uniapp-vue3-ts-template my-project
 
 cd my-project
 
-# node v16
 pnpm install
 ```
 
