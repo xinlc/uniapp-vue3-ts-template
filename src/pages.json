@@ -186,7 +186,7 @@
     "backgroundColorBottom": "@bgColorBottom",
     "backgroundColorTop": "@bgColorTop",
     "backgroundTextStyle": "@bgTxtStyle",
-    "navigationBarBackgroundColor": "#000000",
+    "navigationBarBackgroundColor": "@navBgColor",
     "navigationBarTextStyle": "@navTxtStyle"
     // "navigationStyle": "custom"
   },

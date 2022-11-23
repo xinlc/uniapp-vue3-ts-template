@@ -71,7 +71,8 @@
             "subPackages" : true
         },
         "lazyCodeLoading" : "requiredComponents",
-        "darkmode": true
+        "darkmode": true,
+        "themeLocation": "theme.json"
     },
     "mp-alipay" : {
         "usingComponents" : true,

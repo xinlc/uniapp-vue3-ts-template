@@ -53,7 +53,7 @@ export function HideLoading() {
  * @constructor
  */
 export function Modal(options: UniApp.ShowModalOptions) {
-  return new Promise((resolve, reject) => {
+  return new Promise<UniApp.ShowModalRes>((resolve, reject) => {
     uni.showModal({
       ...options,
       success: res => {
@@ -72,7 +72,7 @@ export function Modal(options: UniApp.ShowModalOptions) {
  * @constructor
  */
 export function ActionSheet(options: UniApp.ShowActionSheetOptions) {
-  return new Promise((resolve, reject) => {
+  return new Promise<UniApp.ShowActionSheetRes>((resolve, reject) => {
     uni.showActionSheet({
       ...options,
       success: res => {

@@ -101,7 +101,7 @@ pnpm install
 pnpm dev:h5
 
 # 微信小程序, 生成的包在 dist/dev/mp-weixin 下，用微信开发者工具打开
-pnpm dev:dev:mp-weixin
+pnpm dev:mp-weixin
 ```
 
 - 打包

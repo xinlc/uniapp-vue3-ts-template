@@ -53,11 +53,17 @@
     console.log('App Hide');
   });
 </script>
-<style lang="scss">
+<style>
   page {
-    background-color: #f2f2f2;
+    background-color: #f3f4f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    page {
+      background-color: #222222;
+    }
   }
 </style>
+<style lang="scss"></style>
 
 <!-- 下面样式用来测试 PagesC CustomBar ，请删除! -->
 <!-- <style lang="scss">

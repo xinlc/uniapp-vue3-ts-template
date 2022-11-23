@@ -161,3 +161,19 @@ export function escapeHTML(str: string) {
  * @example '  Hello  \nWorld  ' => 'Hello World'
  */
 export const removeWhitespace = (str: string) => str.replace(/\s+/g, '');
+
+/**
+ * 消息格式化
+ * @param {string}  message  字符串模板,如'format {0}',
+ * @param {any[]}  arr  模板数据,如['data'],
+ * @returns {string} 消息格式化后的字符串
+ *
+ * @example
+ *  format('format {0}', ['123']); // 'format 123'
+ *  format('format {0} {1}', ['123']); // 'format 123 undefined'
+ */
+export function format(message: string, arr: any[]): string {
+  return message.replace(/{(\d+)}/g, (matchStr, group1) => {
+    return arr[group1];
+  });
+}
