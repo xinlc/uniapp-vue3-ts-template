@@ -10,6 +10,7 @@ import { viteMockServe } from 'vite-plugin-mock';
 import AutoImport from 'unplugin-auto-import/vite';
 import UnoCSS from 'unocss/vite';
 
+// 使用 UnoCSS 代替 WindiCSS
 // import WindiCSS from 'vite-plugin-windicss';
 // import MiniProgramTailwind from '@dcasia/mini-program-tailwind-webpack-plugin/rollup';
 
@@ -125,6 +126,7 @@ const viteConfig = defineConfig((mode: ConfigEnv) => {
       preprocessorOptions: {
         scss: {
           // additionalData: '@import "@/assets/style/main.scss";',
+          additionalData: `$image-path: '${env.VITE_IMAGE_URL}';`,
         },
       },
     },

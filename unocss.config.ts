@@ -1,9 +1,12 @@
+import type { RuleContext } from 'unocss';
+import type { Theme } from 'unocss/preset-uno';
 import { defineConfig, presetAttributify, presetIcons, transformerDirectives, transformerVariantGroup } from 'unocss';
 import { presetApplet, presetRemToRpx, transformerApplet, transformerAttributify } from 'unocss-applet';
+import { parseColor } from '@unocss/preset-mini/utils';
 
 const isH5 = process.env.UNI_PLATFORM === 'h5';
 
-const courseColors = [
+const colors = [
   'rose',
   'pink',
   'fuchsia',
@@ -22,15 +25,54 @@ const courseColors = [
   'red',
 ];
 
-export default defineConfig({
-  shortcuts: {
-    'bg-base': 'bg-gray-100 dark:bg-dark',
-    'bg-base-second': 'bg-white dark:bg-dark-100',
-    'color-base': 'text-gray-700 dark:text-white/80',
-    'color-base-second': 'text-gray-400 dark:text-gray-500/50',
-    'border-base': 'border border-gray-200 dark:border-gray/50',
-    'bg-primary': 'bg-light-blue-500 dark:bg-light-blue-600/80',
+// 定义主题
+const theme: Theme = {
+  colors: {
+    context: 'rgb(var(--uu-c-context))',
+    primary: '#0062ff',
+    success: '#3AC569',
+    info: '#0080FF',
+    warning: '#F17F42',
+    danger: '#fc5a5a',
+    lightBg: '#F3F4F6',
+    darkBg: '#373739',
+    placeholder: '#DCDCDC',
+    grayBg: '#484849',
+    darkBd: '#4C4D4F',
+    softBg: '#E5E6EB',
+    darkTitle: '#ECECEC',
+    darkText: '#7C7C7D',
+    darkSubText: 'rgba(255,255,255,.7)',
+    navBg: '#eff0f5',
+    primaryText: '#333333',
+    regularText: '#666666',
+    secondaryText: '#999999',
+    hoverView: '#f5f5f5',
   },
+};
+
+// 基本快捷方式
+const baseShortcuts: Record<string, string> = {
+  'u-bg-base': 'bg-gray-100 dark:bg-dark',
+  'u-bg-base-second': 'bg-white dark:bg-dark-100',
+  'u-bg-primary': 'bg-light-blue-500 dark:bg-light-blue-600/80',
+  'u-color-base': 'text-gray-700 dark:text-light-2',
+  'u-color-base-second': 'text-gray-400 dark:text-gray-500/60',
+  'u-border-base': 'border-gray-400/50',
+  'u-border-300': 'border-gray-400/40',
+  'u-border-200': 'border-gray-400/25',
+  'u-transition': 'transition-all duration-200',
+  'u-solid': 'bg-context border-context text-white',
+  'u-outline': 'bg-context border-context !bg-op0 text-context',
+  'u-ghost': 'u-outline border-dashed',
+  'u-light': 'bg-context border-context !bg-op20 !border-op0 text-context',
+  'u-text': 'border-context bg-transparent !border-op0 text-context',
+  'u-disabled': 'op70',
+};
+
+const shortcuts = [baseShortcuts];
+
+export default defineConfig({
   presets: [
     presetIcons({
       scale: 1.2,
@@ -55,7 +97,20 @@ export default defineConfig({
     transformerAttributify(),
     transformerApplet(),
   ],
+  theme,
+  shortcuts,
   rules: [
+    [
+      /^u-(.*)$/,
+      ([, body]: string[], { theme }: RuleContext<Theme>) => {
+        const color = parseColor(body, theme);
+        if (color?.cssColor?.type === 'rgb' && color.cssColor.components) {
+          return {
+            '--uu-c-context': `${color.cssColor.components.join(',')}`,
+          };
+        }
+      },
+    ],
     [
       'p-safe',
       {
@@ -65,10 +120,28 @@ export default defineConfig({
     ],
     ['pt-safe', { 'padding-top': 'env(safe-area-inset-top)' }],
     ['pb-safe', { 'padding-bottom': 'env(safe-area-inset-bottom)' }],
+    ['pl-safe', { 'padding-left': 'env(safe-area-inset-left)' }],
+    ['pr-safe', { 'padding-right': 'env(safe-area-inset-right)' }],
+    [
+      'm-safe',
+      {
+        margin:
+          'env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)',
+      },
+    ],
+    ['mt-safe', { 'margin-top': 'env(safe-area-inset-top)' }],
+    ['mb-safe', { 'margin-bottom': 'env(safe-area-inset-bottom)' }],
+    ['ml-safe', { 'margin-left': 'env(safe-area-inset-left)' }],
+    ['mr-safe', { 'margin-right': 'env(safe-area-inset-right)' }],
   ],
   safelist: [
-    ...courseColors.map(c => `bg-${c}`),
-    ...courseColors.map(c => `bg-${c}-3`),
-    ...courseColors.map(c => `text-${c}-5`),
+    ...colors.map(c => `bg-${c}`),
+    ...colors.map(c => `bg-${c}-3`),
+    ...colors.map(c => `text-${c}-5`),
+
+    // colors
+    ...Object.keys(theme.colors!).map(c => `u-${c}`),
+    // shortcuts
+    ...shortcuts.map(s => Object.keys(s)).flat(),
   ],
 });

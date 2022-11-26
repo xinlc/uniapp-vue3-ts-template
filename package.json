@@ -91,6 +91,7 @@
     "@types/qs": "^6.9.7",
     "@typescript-eslint/eslint-plugin": "^5.40.0",
     "@typescript-eslint/parser": "^5.40.0",
+    "@unocss/preset-mini": "^0.46.5",
     "autoprefixer": "^10.4.12",
     "commitizen": "^4.2.5",
     "commitlint-config-cz": "^0.13.3",

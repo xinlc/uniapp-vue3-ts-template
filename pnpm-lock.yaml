@@ -32,6 +32,7 @@ specifiers:
   '@types/qs': ^6.9.7
   '@typescript-eslint/eslint-plugin': ^5.40.0
   '@typescript-eslint/parser': ^5.40.0
+  '@unocss/preset-mini': ^0.46.5
   autoprefixer: ^10.4.12
   await-to-js: ^3.0.0
   commitizen: ^4.2.5
@@ -115,6 +116,7 @@ devDependencies:
   '@types/qs': registry.npmmirror.com/@types/qs/6.9.7
   '@typescript-eslint/eslint-plugin': registry.npmmirror.com/@typescript-eslint/eslint-plugin/5.41.0_huremdigmcnkianavgfk3x6iou
   '@typescript-eslint/parser': registry.npmmirror.com/@typescript-eslint/parser/5.41.0_wyqvi574yv7oiwfeinomdzmc3m
+  '@unocss/preset-mini': registry.npmmirror.com/@unocss/preset-mini/0.46.5
   autoprefixer: registry.npmmirror.com/autoprefixer/10.4.12_postcss@8.4.18
   commitizen: registry.npmmirror.com/commitizen/4.2.5
   commitlint-config-cz: registry.npmmirror.com/commitlint-config-cz/0.13.3

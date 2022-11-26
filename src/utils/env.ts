@@ -75,3 +75,12 @@ export function getUploadUrl(): string {
   if (judgePlatform(PLATFORMS.H5) && isDevMode()) return '/upload';
   return getEnvValue<string>('VITE_UPLOAD_URL');
 }
+
+/**
+ * @description: Get environment VITE_IMAGE_URL value
+ * @returns:
+ * @example:
+ */
+export function getImageUrl(): string {
+  return getEnvValue<string>('VITE_IMAGE_URL');
+}

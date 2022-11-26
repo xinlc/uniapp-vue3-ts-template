@@ -46,6 +46,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    // background-image: url($image-path + '/static/images/currency/bg.png');
   }
 
   .logo {
