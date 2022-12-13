@@ -34,7 +34,7 @@ export const useAuthStore = defineStore({
         this.setToken(data.token);
         return Promise.resolve(data);
       } catch (err: any) {
-        return Promise.reject(err);
+        return Promise.reject(err ?? { msg: '请求异常' });
       }
     },
     /**
@@ -47,7 +47,7 @@ export const useAuthStore = defineStore({
         this.setToken(undefined);
         return Promise.resolve(res);
       } catch (err: any) {
-        return Promise.reject(err);
+        return Promise.reject(err ?? { msg: '请求异常' });
       }
     },
     /**
@@ -59,7 +59,7 @@ export const useAuthStore = defineStore({
         this.setToken(data.token);
         return Promise.resolve(data);
       } catch (err: any) {
-        return Promise.reject(err);
+        return Promise.reject(err ?? { msg: '请求异常' });
       }
     },
   },

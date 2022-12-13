@@ -85,6 +85,8 @@
     "@dcloudio/vite-plugin-uni": "3.0.0-3060520221121001",
     "@iconify-json/carbon": "^1.1.9",
     "@iconify-json/mdi": "^1.1.33",
+    "@iconify/tools": "^2.1.2",
+    "@iconify/utils": "^2.0.3",
     "@types/crypto-js": "^4.1.1",
     "@types/lodash-es": "^4.17.6",
     "@types/node": "^17.0.45",

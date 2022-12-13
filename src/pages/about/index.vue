@@ -38,6 +38,11 @@
       <view class="cell" v-else>
         <BasicButton @click="handleJump('/pages/login/index')"> 登入 </BasicButton>
       </view>
+
+      <view class="i-custom-svg:loading text-blue-600 hover:text-red-600 icon24 inline-icon"></view>
+      <view class="i-custom-svg:loadin2 text-blue-600 hover:text-red-600 icon24 inline-icon"></view>
+      <view class="i-test-github text-blue-600 hover:text-red-600 icon16 inline-icon"></view>
+      <view class="i-carbon-logo-github text-blue-600 hover:text-red-600 icon24 inline-icon"></view>
     </view>
   </AppProvider>
 </template>
