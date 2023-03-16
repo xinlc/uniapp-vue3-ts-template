@@ -34,6 +34,7 @@ export function getEnvMode(): string {
  * @example:
  */
 export function getEnvValue<T = any>(key: string): T {
+  // 注意：拿到的都是 string 类型
   // @ts-ignore
   return import.meta.env[key];
 }
@@ -44,7 +45,7 @@ export function getEnvValue<T = any>(key: string): T {
  * @example:
  */
 export function isDevMode(): boolean {
-  return getEnvValue<boolean>('VITE_DEV');
+  return getEnvValue<string>('VITE_DEV') === 'true';
 }
 
 /**
@@ -53,7 +54,7 @@ export function isDevMode(): boolean {
  * @example:
  */
 export function isProdMode(): boolean {
-  return getEnvValue<boolean>('VITE_PROD');
+  return getEnvValue<string>('VITE_PROD') === 'true';
 }
 
 /**
