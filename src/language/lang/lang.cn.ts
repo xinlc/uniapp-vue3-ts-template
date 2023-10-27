@@ -7,6 +7,7 @@ export default {
     tabbarExplosive: '每日推荐',
   },
   common: {
+    offline: '平台下线',
     platform: 'xxx平台',
     wxLoginTip: '微信授权登陆',
 
